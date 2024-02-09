@@ -1,0 +1,163 @@
+body {
+  
+  background: #456990;
+  color: #fff;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+.introduce {
+  background: #f45b69;
+  padding: 100px 0;
+}
+
+.containerbox {
+  width: 95%;
+  max-width: 1400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+.Timeline ul {
+  background: #456990;
+  
+}
+
+.Timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 10px;
+  margin: 0 auto;
+  padding-top: 40px;
+  background: #fff;
+}
+.Timeline ul li::after {
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  border-radius: 50%;
+  background: #fff;
+  
+}
+.Timeline ul li div {
+  position: relative;
+  /* position: sticky; */
+  /* transition: right 0.5s ease,left 0.5s ease; */
+  width: 300px;
+  padding: 12px;
+  background: #f45b69;
+  
+}
+.Timeline ul li div::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  border-style: solid;
+}
+ /* .Timeline ul li:nth-child(even) div {
+  right: 50px;
+}
+.Timeline ul li:nth-child(odd) div {
+  left: 50px;
+} */
+
+ .Timeline ul li:nth-child(even) div {
+    right: 380px;
+}
+
+.Timeline ul li:nth-child(even) div::before {
+  right: -10px;
+  border-width: 10px 0 10px 20px;
+  border-color:  transparent #f45b69;
+}
+.Timeline ul li:nth-child(odd) div {
+  left: 50px;
+}
+
+.Timeline ul li:nth-child(odd) div::before {
+  left: -10px;
+  border-width: 10px 20px 10px 0;
+  border-color: transparent #f45b69;
+  
+}
+.Timeline ul li::after {
+  animation: liafterAnimation 2s infinite ;
+}
+
+@keyframes liafterAnimation {
+  0% {
+    transform: translate(-50%)  scale(1);
+  }
+  25% {
+    transform: translate(-50%) scale(1.20);
+  }
+  50% {
+    transform: translate(-50%) scale(1.3);
+  }
+  75% {
+    transform: translate(-50%) scale(1.20);
+  }
+  100% {
+    transform: translate(-50%) scale(1);
+  }
+}
+.Timeline ul li:nth-child(even) div {
+  animation: movefromLEFT 2s ease-in ;
+}
+@keyframes movefromLEFT {
+  from{
+    transform: translatex(-100%);
+  }
+  to{
+    transform: translatex(0);
+  }
+}
+.Timeline ul li:nth-child(odd) div {
+  animation: movefromright 2s ease-in ;
+}
+@keyframes movefromright {
+  from{
+    transform: translatex(100%);
+  }
+  to{
+    transform: translatex(0);
+  } 
+}
+
+.Timeline ul li:nth-child(1) div {
+    animation-delay: 0s;
+}
+.Timeline ul li:nth-child(2) div {
+  animation-delay: 0s;
+}
+.Timeline ul li:nth-child(3) div {
+  animation-delay: 3s;
+}
+.Timeline ul li:nth-child(4) div {
+  animation-delay: 3s;
+}
+.Timeline ul li:nth-child(5) div {
+  animation-delay: 5s;
+}
+.Timeline ul li:nth-child(6) div {
+  animation-delay: 5s;
+}
+/* .scroll-right {
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.scroll-left {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Add this style for smooth scrolling */
+body.scroll-active .scroll-right,
+body.scroll-active .scroll-left {
+  transform: translateX(0);
+} */
